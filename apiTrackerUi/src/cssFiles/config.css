@@ -1,0 +1,28 @@
+.table-container {
+  background-color: #0f172a !important;
+}
+
+.table-header {
+  background-color: #5284D9 !important;
+}
+
+.table-cell {
+  color: #fff !important;
+}
+
+.table-row {
+  transition: background-color 0.3s ease !important;
+}
+
+.table-row:hover {
+  background-color: #1e293b !important;
+  cursor: pointer;
+}
+
+.icon-white {
+  color: #fff !important;
+}
+
+.icon-button {
+  padding: 6px;
+}

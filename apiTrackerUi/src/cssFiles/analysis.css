@@ -1,0 +1,17 @@
+.circular-progressbar .CircularProgressbar-text {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.analysis-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #0f172a;
+  padding: 2rem;
+}
+
+.chart-container {
+  background-color: #0f172a;
+  padding: 1rem;
+}

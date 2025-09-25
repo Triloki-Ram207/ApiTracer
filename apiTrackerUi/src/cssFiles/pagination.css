@@ -1,0 +1,36 @@
+.month-pagination {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 20px;
+  color: #cbd5e1;
+  border:2px solid red;
+}
+
+.month-pagination button {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.month-pagination button:hover:not(:disabled) {
+  background-color: #334155;
+}
+
+.month-pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.month-data {
+  margin-top: 20px;
+  background-color: #1e293b;
+  padding: 12px;
+  border-radius: 6px;
+  color: #e2e8f0;
+  font-size: 14px;
+}

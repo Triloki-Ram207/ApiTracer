@@ -1,0 +1,14 @@
+.home{
+    width:100%;
+    min-height: 100vh;
+    background-color: #0f172a;
+    display: flex;
+}
+
+.content{
+    flex:1;
+    min-height: 100%;
+    padding: 2rem;
+    overflow-y: auto;
+    background-color: #0a1224de;
+}
