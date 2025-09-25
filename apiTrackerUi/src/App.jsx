@@ -11,11 +11,12 @@ import axios from 'axios';
 function App() {
   const [data, setData] = useState(null);
   const [error, setError] = useState('');
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('http://localhost:4000/api/logs');
+          const res = await axios.get(`${apiUrl}/api/logs`);
         setData(res.data);
         console.log(res.data);
       } catch (err) {
