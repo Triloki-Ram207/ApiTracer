@@ -88,7 +88,7 @@ function ActionModal({ open, handleClose, endpoint }) {
 
     try {
       const payload = { endpoint, ...controls };
-      await axios.post('http://localhost:4000/api/controls', payload);
+      await axios.post(`${apiUrl}/api/controls`, payload);
       setToast({ open: true, message: 'Settings saved successfully', severity: 'success' });
     } catch (err) {
       setToast({ open: true, message: 'Failed to save settings', severity: 'error' });
