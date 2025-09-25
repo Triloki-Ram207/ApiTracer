@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Sidebar from '../components/Sidebar.jsx'
-import '../cssFiles/Home.css'
+import '../cssFiles/home.css'
 
 function Home() {
   return (
