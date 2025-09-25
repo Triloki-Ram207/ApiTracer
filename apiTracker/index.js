@@ -47,8 +47,8 @@ app.post('/log', authMiddleware, async (req, res) => {
 app.use('/api', router);
 
 // 🔍 Health check
-app.get('/hello', (req, res) => {
-  console.log('Hello endpoint hit');
+app.get('/', (req, res) => {
+  console.log('/ endpoint hit');
   res.send('Hello World!');
 });
 
