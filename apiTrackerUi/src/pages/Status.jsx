@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../cssFiles/Status.css';
+import '../cssFiles/status.css';
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { MdOutlineCancel } from "react-icons/md";
 import { FcNext, FcPrevious } from "react-icons/fc";

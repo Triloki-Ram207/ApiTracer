@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import '../cssFiles/Tracer.css';
+import '../cssFiles/tracer.css';
 
 function Tracer({ data }) {
 

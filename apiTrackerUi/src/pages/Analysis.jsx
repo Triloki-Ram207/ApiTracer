@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 
 import 'react-circular-progressbar/dist/styles.css';
 import UptimeTrendChart from '../components/graph.jsx';
-import '../cssFiles/Analysis.css';
+import '../cssFiles/analysis.css';
 import MetricCard from '../components/MetricCard.jsx';
 
 const COLORS = {
