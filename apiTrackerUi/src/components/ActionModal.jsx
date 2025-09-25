@@ -37,13 +37,15 @@ function ActionModal({ open, handleClose, endpoint }) {
 
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState({ open: false, message: '', severity: 'success' });
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const fetchSettings = async () => {
       if (!open || !endpoint) return;
       setLoading(true);
       try {
-        const res = await axios.get('http://localhost:4000/api/controls/data', {
+
+        const res = await axios.get(`${apiUrl}/api/controls/data`, {
           params: { endpoint }
         });
 
