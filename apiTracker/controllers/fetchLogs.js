@@ -49,6 +49,11 @@ export const logData = async (req, res) => {
   dateLogs[date].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 }
 
+const sortedDateLogs = Object.fromEntries(
+  Object.entries(dateLogs)
+    .sort((a, b) => new Date(b[0]) - new Date(a[0]))
+);
+ 
     // 📈 Calculate uptime per month
     for (const [monthKey, endpoints] of Object.entries(monthlyLogs)) {
       let total = 0;
@@ -73,11 +78,11 @@ export const logData = async (req, res) => {
     );
 
     const metrics = await calculateMetrics();
-
+     
     res.status(200).json({
       success: true,
       data: endpointLogs,
-      logs: dateLogs,
+      logs:sortedDateLogs,
       monthlyLogs,
       metrics,
       uptimeData,
