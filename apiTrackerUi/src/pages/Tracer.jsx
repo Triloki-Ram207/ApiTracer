@@ -4,6 +4,7 @@ import '../cssFiles/tracer.css';
 function Tracer({ data }) {
 
    const today = useMemo(() => new Date(), []);
+   console.log(data);
   const yesterday = useMemo(() => {
     const y = new Date();
     y.setDate(y.getDate() - 1);
