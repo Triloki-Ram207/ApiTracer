@@ -26,6 +26,8 @@ const isWithinSchedule = (start, end) => {
 
 const tracerMiddleware = (apiKey) => {
   return async (req, res, next) => {
+    console.log('Incoming request:', apiKey);
+
     const incomingKey = req.headers['x-api-key'];
     if (!incomingKey || incomingKey !== apiKey) return next();
     if (req.originalUrl === '/log') return next();
@@ -40,14 +42,15 @@ const tracerMiddleware = (apiKey) => {
     let controlStatus = {};
 
     try {
-      const resControl = await axios.get('http://localhost:4000/api/controls/check', {
+      const resControl = await axios.get('https://apitracerbackend.onrender.com/api/controls/check', {
         params: { endpoint },
         headers: { 'x-api-key': apiKey }
       });
+      console.log("resControl:", resControl.data);
       controlStatus = resControl.data.data;
       if (!controlStatus?.exists) {
   try {
-    await axios.post('http://localhost:4000/api/controls', {
+    await axios.post('https://apitracerbackend.onrender.com/api/controls', {
       endpoint,
       api: false,
       tracer: false,
@@ -156,7 +159,7 @@ const tracerMiddleware = (apiKey) => {
 
       if (shouldTrace) {
         try {
-          await axios.post('http://localhost:4000/log', tracePayload, {
+          await axios.post('https://apitracerbackend.onrender.com/api/storelogs', tracePayload, {
             headers: {
               'x-api-key': apiKey,
               'Content-Type': 'application/json'
