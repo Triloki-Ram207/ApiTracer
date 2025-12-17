@@ -3,7 +3,6 @@
     min-height: 100vh;
     background-color: #0f172a;
     display: flex;
-    /* border:5px solid rgb(214, 34, 64); */
 }
 
 .content{
@@ -12,8 +11,6 @@
     padding: 2rem;
     overflow-y: auto;
     background-color: #0a1224de;
-    /* border:5px solid rgb(37, 34, 214); */
-
 }
 
 @media (max-width: 768px) {

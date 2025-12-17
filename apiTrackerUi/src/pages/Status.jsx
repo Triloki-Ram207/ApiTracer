@@ -32,7 +32,7 @@ function Status({ data }) {
   }, [currentIndex]);
 
   const getStatusColor = (code) => {
-    if (code === 200) return 'green';
+    if (code === 200 || code === 201) return 'green';
     if (code >= 400 && code <= 599) return 'red';
     if (code >= 300 && code <= 399) return 'orange';
     if (code >= 100 && code <= 199) return 'yellow';

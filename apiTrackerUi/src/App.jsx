@@ -18,7 +18,6 @@ function App() {
       try {
           const res = await axios.get(`${apiUrl}/api/logs`);
         setData(res.data);
-        console.log(res.data);
       } catch (err) {
         console.error('❌ Failed to fetch logs:', err.message);
         setError('Failed to load data');
