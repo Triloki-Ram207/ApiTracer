@@ -1,6 +1,5 @@
 import TracerLog from '../models/tracerlogs.js';
 
-
 const storeLogs=async (req, res) => {
   try {
     console.log('Received log:', req.body);

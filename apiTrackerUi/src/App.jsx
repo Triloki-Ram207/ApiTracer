@@ -39,7 +39,10 @@ function App() {
             ) : error ? (
               <p>{error}</p>
             ) : (
-              <p>Loading status...</p>
+               <div className="loading-container">
+        <div className="spinner"></div>
+        <p className="loading-text">Loading status...</p>
+         </div>
             )
           }
         />
@@ -51,7 +54,11 @@ function App() {
             ) : error ? (
               <p>{error}</p>
             ) : (
-              <p>Loading tracer...</p>
+              <div className="loading-container">
+        <div className="spinner"></div>
+        <p className="loading-text">Loading tracer...</p>
+         </div>
+             
             )
           }
         />
@@ -63,7 +70,11 @@ function App() {
             ) : error ? (
               <p>{error}</p>
             ) : (
-              <p>Loading analysis...</p>
+              <div className="loading-container">
+        <div className="spinner"></div>
+        <p className="loading-text">Loading analysis...</p>
+         </div>
+              
             )
           }
         />
@@ -75,7 +86,10 @@ function App() {
             ) : error ? (
               <p>{error}</p>
             ) : (
-              <p>Loading configuration...</p>
+               <div className="loading-container">
+        <div className="spinner"></div>
+        <p className="loading-text">Loading configuration...</p>
+         </div>
             )
           }
         />
