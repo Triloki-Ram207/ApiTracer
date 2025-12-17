@@ -97,7 +97,7 @@ function Status({ data }) {
                   {paginatedLogs.map((log, index) => {
                     const color = getStatusColor(log.statusCode);
                     const isLast = index === paginatedLogs.length - 1;
-                    const isSuccess = log.statusCode === 200;
+                    const isSuccess = log.statusCode === 200 || log.statusCode === 201;
 
                     return (
                       <div key={log._id || index}>
