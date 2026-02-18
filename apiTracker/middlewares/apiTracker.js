@@ -26,7 +26,6 @@ const isWithinSchedule = (start, end) => {
 
 const tracerMiddleware = (apiKey) => {
   return async (req, res, next) => {
-    console.log('Incoming request:', apiKey);
 
     const incomingKey = req.headers['x-api-key'];
     if (!incomingKey || incomingKey !== apiKey) return next();
@@ -46,7 +45,7 @@ const tracerMiddleware = (apiKey) => {
         params: { endpoint },
         headers: { 'x-api-key': apiKey }
       });
-      console.log("resControl:", resControl.data);
+      // console.log("resControl:", resControl.data);
       controlStatus = resControl.data.data;
       if (!controlStatus?.exists) {
   try {
